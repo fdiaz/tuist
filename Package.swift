@@ -520,6 +520,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-collections", .upToNextMajor(from: "1.1.4")),
         .package(url: "https://github.com/apple/swift-service-context", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/chrisaljoudi/swift-log-oslog.git", .upToNextMajor(from: "0.2.2")),
+        .package(url: "https://github.com/tuist/Noora", .upToNextMajor(from: "0.17.0"))
     ],
     targets: targets
 )

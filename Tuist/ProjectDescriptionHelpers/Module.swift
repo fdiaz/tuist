@@ -255,6 +255,7 @@ public enum Module: String, CaseIterable {
                     .external(name: "GraphViz"),
                     .external(name: "ArgumentParser"),
                     .external(name: "SwiftToolsSupport"),
+                    .external(name: "Noora")
                 ]
             case .tuistBenchmark:
                 [
@@ -283,6 +284,7 @@ public enum Module: String, CaseIterable {
                     .external(name: "Difference"),
                     .external(name: "Command"),
                     .external(name: "LoggingOSLog"),
+                    .external(name: "Noora")
                 ]
             case .kit:
                 [

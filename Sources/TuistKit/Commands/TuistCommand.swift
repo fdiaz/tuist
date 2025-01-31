@@ -74,7 +74,7 @@ public struct TuistCommand: AsyncParsableCommand {
             path = .current
         }
 
-        let config = try await ConfigLoader(warningController: WarningController.shared).loadConfig(path: path)
+        let config = try await ConfigLoader().loadConfig(path: path)
         let url = try ServerURLService().url(configServerURL: config.url)
         let analyticsEnabled: Bool
         if let fullHandle = config.fullHandle {
@@ -120,19 +120,20 @@ public struct TuistCommand: AsyncParsableCommand {
         }
 
         do {
-            defer { WarningController.shared.flush() }
+            
             try await executeCommand()
+            await printAlerts()
         } catch let error as FatalError {
-            WarningController.shared.flush()
+            await printAlerts()
             errorHandler.fatal(error: error)
             _exit(exitCode(for: error).rawValue)
         } catch let error as ClientError where error.underlyingError is ServerClientAuthenticationError {
-            WarningController.shared.flush()
+            await printAlerts()
             // swiftlint:disable:next force_cast
-            ServiceContext.current?.logger?.error("\((error.underlyingError as! ServerClientAuthenticationError).description)")
+            ServiceContext.current?.ui?.error(.alert("\((error.underlyingError as! ServerClientAuthenticationError).description)"))
             _exit(exitCode(for: error).rawValue)
         } catch {
-            WarningController.shared.flush()
+            printAlerts()
             if let parsedError {
                 handleParseError(parsedError)
             }
@@ -142,6 +143,18 @@ public struct TuistCommand: AsyncParsableCommand {
             } else {
                 errorHandler.fatal(error: UnhandledError(error: error))
                 _exit(exitCode(for: error).rawValue)
+            }
+        }
+    }
+    
+    private static func printAlerts() {
+        let alerts = ServiceContext.current?.alerts?.alerts ?? []
+        for alert in alerts {
+            switch alert {
+            case .success(let successAlert):
+                ServiceContext.current?.ui?.success(successAlert)
+            case .warning(let warningAlert):
+                ServiceContext.current?.ui?.warning(warningAlert)
             }
         }
     }
