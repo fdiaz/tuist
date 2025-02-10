@@ -1,5 +1,5 @@
 {
-  "originHash" : "7c89c07df267392458c278f7e2c22a928ea7dd73a16d20d04384214caa2c39a3",
+  "originHash" : "a2d6c90666f54e04c2ee5f048e740b895fef7ed05f72314f6caa1ebfaedc5c16",
   "pins" : [
     {
       "identity" : "aexml",
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/krzysztofzablocki/Difference.git",
       "state" : {
-        "revision" : "f627d00718033c3d7888acd5f4e3524a843db1cf",
-        "version" : "1.0.2"
+        "revision" : "7eb73c5d28c87dd6c4bac805aa28f757648aa92c",
+        "version" : "1.1.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tuist/FileSystem.git",
       "state" : {
-        "revision" : "f5f8b0be3bc2647f37f6aa176d8f0f7dd5cb4252",
-        "version" : "0.7.0"
+        "revision" : "b2c6c9a68fd7609ca1b7b3e8dd4d2fc76396eac3",
+        "version" : "0.7.2"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tid-kijyun/Kanna.git",
       "state" : {
-        "revision" : "f9e4922223dd0d3dfbf02ca70812cf5531fc0593",
-        "version" : "5.2.7"
+        "revision" : "41c3d28ea0eac07e4551b28def9de1ede702e739",
+        "version" : "5.3.0"
       }
     },
     {
@@ -105,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tuist/Noora",
       "state" : {
-        "revision" : "e34e5db0093f26bd89ddf4893262acbe91ea8e9c",
-        "version" : "0.17.0"
+        "branch" : "cs/noora-mock",
+        "revision" : "b1859fc58dba52656501b1c82dc4e67047911b98"
       }
     },
     {
@@ -231,8 +231,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-http-types",
       "state" : {
-        "revision" : "ae67c8178eb46944fd85e4dc6dd970e1f3ed6ccd",
-        "version" : "1.3.0"
+        "revision" : "ef18d829e8b92d731ad27bb81583edd2094d1ce3",
+        "version" : "1.3.1"
       }
     },
     {
@@ -240,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-issue-reporting",
       "state" : {
-        "revision" : "a3f634d1a409c7979cabc0a71b3f26ffa9fc8af1",
-        "version" : "1.4.3"
+        "revision" : "b444594f79844b0d6d76d70fbfb3f7f71728f938",
+        "version" : "1.5.1"
       }
     },
     {
@@ -267,8 +267,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio",
       "state" : {
-        "revision" : "dca6594f65308c761a9c409e09fbf35f48d50d34",
-        "version" : "2.77.0"
+        "revision" : "dff45738d84a53dbc8ee899c306b3a7227f54f89",
+        "version" : "2.80.0"
       }
     },
     {
@@ -276,8 +276,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-openapi-runtime",
       "state" : {
-        "revision" : "26e8ae3515d1ff3607e924ac96fc0094775f55e8",
-        "version" : "1.5.0"
+        "revision" : "23146bc8710ac5e57abb693113f02dc274cf39b6",
+        "version" : "1.8.0"
       }
     },
     {
@@ -294,8 +294,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-service-context",
       "state" : {
-        "revision" : "0c62c5b4601d6c125050b5c3a97f20cce881d32b",
-        "version" : "1.1.0"
+        "revision" : "8946c930cae601452149e45d31d8ddfac973c3c7",
+        "version" : "1.2.0"
       }
     },
     {
@@ -303,8 +303,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
-        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
-        "version" : "509.1.1"
+        "revision" : "2bc86522d115234d1f588efe2bcb4ce4be8f8b82",
+        "version" : "510.0.3"
       }
     },
     {
@@ -319,10 +319,10 @@
     {
       "identity" : "swift-tools-support-core",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-tools-support-core.git",
+      "location" : "https://github.com/apple/swift-tools-support-core",
       "state" : {
-        "revision" : "3b13e439a341bbbfe0f710c7d1be37221745ef1a",
-        "version" : "0.6.1"
+        "revision" : "b464fcd8d884e599e3202d9bd1eee29a9e504069",
+        "version" : "0.7.2"
       }
     },
     {
@@ -339,8 +339,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/cpisciotta/xcbeautify",
       "state" : {
-        "revision" : "d5a29fcc952f29ac70537a07d2a7181b052aa870",
-        "version" : "2.20.0"
+        "revision" : "82561f90bc66596e3667a2016bd464ff27ea7b0b",
+        "version" : "2.23.0"
       }
     },
     {
@@ -375,8 +375,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/Yams.git",
       "state" : {
-        "revision" : "0d9ee7ea8c4ebd4a489ad7a73d5c6cad55d6fed3",
-        "version" : "5.0.6"
+        "revision" : "3036ba9d69cf1fd04d433527bc339dc0dc75433d",
+        "version" : "5.1.3"
       }
     },
     {
