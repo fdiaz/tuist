@@ -1,3 +1,4 @@
+import FileSystem
 import Foundation
 import Mockable
 import TuistCore
@@ -20,6 +21,7 @@ final class AnalyticsArtifactUploadServiceTests: TuistTestCase {
     override func setUp() {
         super.setUp()
 
+        let fileSystem = FileSystem()
         xcresultToolController = .init()
         fileArchiverFactory = .init()
         multipartUploadStartAnalyticsService = .init()
@@ -29,7 +31,7 @@ final class AnalyticsArtifactUploadServiceTests: TuistTestCase {
         completeAnalyticsArtifactsUploadsService = .init()
 
         subject = AnalyticsArtifactUploadService(
-            fileHandler: fileHandler,
+            fileSystem: fileSystem,
             xcresultToolController: xcresultToolController,
             fileArchiver: fileArchiverFactory,
             retryProvider: RetryProvider(),

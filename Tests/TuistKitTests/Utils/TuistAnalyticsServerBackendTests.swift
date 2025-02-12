@@ -70,7 +70,7 @@ final class TuistAnalyticsServerBackendTests: TuistUnitTestCase {
                 )
 
             // When
-            try await subject.send(commandEvent: event)
+            let _: ServerCommandEvent = try await subject.send(commandEvent: event)
 
             // Then
             XCTAssertPrinterOutputNotContains("You can view a detailed report at: https://tuist.dev/tuist-org/tuist/runs/10")
@@ -101,7 +101,7 @@ final class TuistAnalyticsServerBackendTests: TuistUnitTestCase {
                 )
 
             // When
-            try await subject.send(commandEvent: event)
+            let _: ServerCommandEvent = try await subject.send(commandEvent: event)
 
             // Then
             XCTAssertStandardOutput(pattern: "You can view a detailed report at: https://tuist.dev/tuist-org/tuist/runs/10")
@@ -146,7 +146,7 @@ final class TuistAnalyticsServerBackendTests: TuistUnitTestCase {
                 .willReturn(())
 
             // When
-            try await subject.send(commandEvent: event)
+            let _: ServerCommandEvent = try await subject.send(commandEvent: event)
 
             // Then
             XCTAssertStandardOutput(pattern: "You can view a detailed report at: https://tuist.dev/tuist-org/tuist/runs/10")
